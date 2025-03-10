@@ -1,0 +1,316 @@
+{% extends 'oscar/base.html' %}
+{% load static %}
+
+{% block body %}
+
+<div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- banner section  -->
+    <section class="banner_section about_outer_section contact_us_outer_section">
+        <div class="container">
+            <div class="banner_box w-100" data-aos="fade-up">
+                <h6>CONTACT US</h6>
+               <h1>PLEASE GET IN TOUCH WITH US</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact form section  -->
+
+    <section class="contact_form_section" id="get-in-touch">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-6">
+                    <div class="contact_left_content" data-aos="fade-right">
+                    <h2 >We're exited to hear from you!</h2>
+                    <p>Thank you for your interest in Millies Collection.</p>
+                    
+                    <!-- Phone -->
+                     <div class="contact_info_outer_sec">
+                    <div class="contact-info-item d-flex align-items-center gap-3 mb-4">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div class="contact_info_text">
+                            <h6>CALL US</h6>
+                            <p>(973) 875-0312</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="contact-info-item d-flex align-items-center gap-3 mb-4">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div class="contact_info_text">
+                            <h6>MAIL US</h6>
+                            <p>admin@milliescollections.com</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Address -->
+                    <div class="contact-info-item d-flex align-items-center gap-3 mb-4">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div class="contact_info_text">
+                            <h6>HEADQUARTERS</h6>
+                            <p >MILLIES, 7 The Parade, Colchester Road, London, RK3 OAO</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+                
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <div class="contact_right_content" data-aos="fade-left">
+                        <form method="POST" class="contact-form" id="contact-form">
+                            {% csrf_token %}
+                            <div class="mb-3"> 
+                                <label for="name">Name*</label>
+                                <input name="name" id="name" type="text" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email Address *</label>
+                                <input name="email" id="email" type="email" class="form-control" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="enquiry">Enquiry option *</label>
+                                <select name="enquiry" id="enquiry" class="form-control" required>
+                                    <option value="" disabled selected>Select enquiry option</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Support">Support</option>
+                                    <option value="Business">Business</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message">Please tell me about your inquiries</label>
+                                <textarea name="message" id="message" class="form-control" placeholder="Please tell me about your inquiry" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-send">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- google map section  -->
+    <section class="google_map_section">
+        <div class="container">
+            <div class="maps_heading_sec" data-aos="fade-up">
+                <h2>Find Us on Google Map</h2>
+            </div>
+            <div class="google_map_outer_sec" data-aos="zoom-in">
+                <iframe 
+                    id="storeMap"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25897424!2d-74.11976404929199!3d40.697403441436425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin&maptype=roadmap&style=element:geometry%7Ccolor:0xf0f5f0&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x2a5a2a&style=feature:poi%7Celement:geometry%7Ccolor:0xe5f0e5&style=feature:poi.park%7Celement:geometry%7Ccolor:0xc8e6c8&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.highway%7Celement:geometry%7Ccolor:0xb3d1b3&style=feature:water%7Celement:geometry%7Ccolor:0xa5d6a7&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x1b5e20"
+                    width="100%" 
+                    height="600" 
+                    style="box-shadow: 0 4px 20px rgba(0,0,0,0.1);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- partner section  -->
+    <section class="partner_section" id="partnership">
+        <div class="container">
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-8">
+                    <div class="patner_content">
+                        <h6>Become a Partner</h6>
+                        <h2>BRING ECO-FRIENDLY ELEGANCE TO YOUR STORE TODAY!</h2>
+                        <p>Enhance your store with our luxurious, sustainable products made from natural materials.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end align-items-center">
+                   <div class="patner_btn">
+                        <button>Partner with us <i class="fa fa-arrow-right"></i></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- asked question section  -->
+
+    <section class="faq_section">
+        <div class="container">
+        <h2 class="faq-title" data-aos="fade-up">Frequently Asked Questions</h2>
+        <div class="accordian_outer_sec" data-aos="fade-up" data-aos-delay="100">
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="view-more">
+           <button class="view-more-btn">View more <i class="fa fa-arrow-right"></i></button>
+        </div>
+    </div>
+      </div>
+    </section>
+
+    {% block footer %}
+    {% include 'oscar/footer.html' %}
+    {% endblock %}
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+    
+            const form = event.target;
+            const formData = new FormData(form);
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    
+            try {
+                const response = await fetch("{% url 'contactUs:contact-us' %}", {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                    },
+                    body: formData,
+                });
+    
+                const data = await response.json();
+    
+                // Dynamically create the toast
+                const toastContainer = document.getElementById('toast-container');
+                toastContainer.innerHTML = '';
+
+                if (response.ok) {
+                    // Success message
+                    const toastHTML = `
+                        <div class="toast bg-opacity-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+                            <div class="toast-header">
+                                <i class="fas fa-check-circle me-2 text-success"></i>
+                                <strong class="me-auto">Success</strong>
+                                <small class="text-muted">Just now</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body-reponse-ok">
+                                ${data.message}
+                            </div>
+                        </div>
+                    `;
+                    toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+                } else {
+                    // Error message
+                    const toastHTML = `
+                        <div class="toast bg-opacity-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+                            <div class="toast-header">
+                                <i class="fas fa-exclamation-circle me-2 text-danger"></i>
+                                <strong class="me-auto">Error</strong>
+                                <small class="text-muted">Just now</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                ${data.error}
+                                </br>
+                                ${data.errors.email}
+                            </div>
+                        </div>
+                    `;
+                    toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+                }
+    
+                // Show the toast using Bootstrap Toast
+                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+                var toastList = toastElList.map(function (toastEl) {
+                    return new bootstrap.Toast(toastEl)
+                });
+                toastList.forEach(toast => toast.show());
+    
+                // Reset form
+                form.reset();
+    
+            } catch (error) {
+                console.error('Error:', error);
+                const toastContainer = document.getElementById('toast-container');
+                const toastHTML = `
+                    <div class="toast bg-opacity-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+                        <div class="toast-header">
+                            <i class="fas fa-exclamation-circle me-2 text-danger"></i>
+                            <strong class="me-auto">Error</strong>
+                            <small class="text-muted">Just now</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            An unexpected error occurred. Please try again later.
+                        </div>
+                    </div>
+                `;
+                toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+    
+                // Show the toast using Bootstrap Toast
+                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+                var toastList = toastElList.map(function (toastEl) {
+                    return new bootstrap.Toast(toastEl)
+                });
+                toastList.forEach(toast => toast.show());
+            }
+        });
+    </script>
+    
+
+{% endblock %}

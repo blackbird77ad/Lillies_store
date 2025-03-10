@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millies</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="top_header" id="announcement_bar">
+            <div class="container">
+                <span><h5 id="changing-heading">FREE UK STANDARD DELIVERY</h5></span>
+                <button class="close-btn" onclick="closeAnnouncement()">&times;</button>
+            </div>
+        </div>
+        <div class="main_header">
+            <div class="middle_header">
+                <div class="container">
+                    <div class="flex_middle_header">
+                        <div class="mobile-menu-toggle d-lg-none">
+                            <svg class="svg-inline--fa fa-bars" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg>
+                        </div>
+                        
+                        <div class="search_box d-none d-md-none d-lg-flex">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 23 23" fill="none">
+                                <path d="M22.5 22.5L18.2223 18.2222M21.2778 10.8889C21.2778 16.6265 16.6265 21.2778 10.8889 21.2778C5.15126 21.2778 0.5 16.6265 0.5 10.8889C0.5 5.15126 5.15126 0.5 10.8889 0.5C16.6265 0.5 21.2778 5.15126 21.2778 10.8889Z" stroke="#505050" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span>
+                            <input type="text" placeholder="Search..." class="search_input">
+                        </div>
+                        
+                        <div class="logo ">
+                            <!-- <a href="home.html"><img src="./images/black_logo.svg" alt="logo"></a> -->
+                             <a href="home.html"><h2>Millies</h2></a>
+                        </div>
+                        
+                        <div class="icon_box d-none d-lg-flex">
+                            <div class="d-md-none mobile-search">
+                                <img src="./images/search.svg" alt="search">
+                            </div>
+                            
+
+                            <div class="select-wrapper new_select_wrapper ">
+                                <div class="custom-select">
+                                    <div class="select-selected">
+                                        <span class="selected-text">VND</span>
+                                        <img class="dropdown-icon" src="./images/down.svg" alt="dropdown">
+                                    </div>
+                                    <div class="select-items select-hide">
+                                        <div data-value="VND">VND</div>
+                                        <div data-value="USD">USD</div>
+                                        <div data-value="GBP">GBP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="icon-with-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 22 21" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6599 2.89519C8.66055 0.273917 5.32649 -0.431197 2.82145 1.9691C0.316391 4.3694 -0.0362856 8.38257 1.93095 11.2214C3.56656 13.5817 8.51653 18.5598 10.1389 20.171C10.3204 20.3512 10.4111 20.4414 10.517 20.4768C10.6094 20.5077 10.7104 20.5077 10.8028 20.4768C10.9087 20.4414 10.9994 20.3512 11.1809 20.171C12.8033 18.5598 17.7532 13.5817 19.3888 11.2214C21.3561 8.38257 21.0464 4.34415 18.4983 1.9691C15.9502 -0.405947 12.6593 0.273917 10.6599 2.89519Z" stroke="#170707" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                <span class="badge_number">0</span>
+                            </div>
+                            
+                            <div class="icon-with-badge" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 22 22" fill="none">
+                                    <path d="M0.666748 0.666748H1.98023C2.22762 0.666748 2.35132 0.666748 2.45086 0.711988C2.53859 0.751852 2.61294 0.815968 2.66503 0.896692C2.72414 0.988288 2.74164 1.11006 2.77662 1.3536L3.25259 4.66675M3.25259 4.66675L4.31036 12.3981C4.4446 13.3793 4.51172 13.8698 4.74758 14.2391C4.95542 14.5645 5.25338 14.8232 5.60561 14.9841C6.00535 15.1668 6.50321 15.1668 7.49891 15.1668H16.1048C17.0525 15.1668 17.5265 15.1668 17.9138 14.9972C18.2553 14.8477 18.5483 14.6066 18.7598 14.301C18.9998 13.9544 19.0885 13.4915 19.2658 12.5655L20.5969 5.61644C20.6593 5.29056 20.6906 5.12762 20.6453 5.00025C20.6056 4.88852 20.5273 4.79444 20.4244 4.73476C20.3071 4.66675 20.1402 4.66675 19.8066 4.66675H3.25259ZM8.71156 19.6668C8.71156 20.219 8.26134 20.6667 7.70596 20.6667C7.15058 20.6667 6.70036 20.219 6.70036 19.6668C6.70036 19.1144 7.15058 18.6667 7.70596 18.6667C8.26134 18.6667 8.71156 19.1144 8.71156 19.6668ZM16.7564 19.6668C16.7564 20.219 16.3062 20.6667 15.7507 20.6667C15.1954 20.6667 14.7452 20.219 14.7452 19.6668C14.7452 19.1144 15.1954 18.6667 15.7507 18.6667C16.3062 18.6667 16.7564 19.1144 16.7564 19.6668Z" stroke="#170707" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                <span class="badge_number">0</span>
+                            </div>
+                            
+                            <div class="d-none d-md-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 21 21" fill="none">
+                                    <path d="M0.5 20.5C3.09532 17.5853 6.61891 15.794 10.5 15.794C14.3811 15.794 17.9047 17.5853 20.5 20.5M15.5 5.79411C15.5 8.71796 13.2615 11.0882 10.5 11.0882C7.73857 11.0882 5.5 8.71796 5.5 5.79411C5.5 2.87025 7.73857 0.5 10.5 0.5C13.2615 0.5 15.5 2.87025 15.5 5.79411Z" stroke="#170707" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-search-overlay d-md-none">
+            <div class="container">
+                <div class="search-wrapper">
+                    <input type="text" placeholder="Search..." class="mobile-search-input">
+                    <span class="close-search"><i class="fas fa-times"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_header">
+            <div class="container">
+                <nav class="d-none d-lg-flex justify-content-center">
+                    <ul >
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">shop</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="wishlist.html">WISHLIST</a></li>
+                        <li class="dropdown">
+                            <a href="contact.html#get-in-touch">CONTACT US <span><img src="./images/down.svg" alt="arrow"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="contact.html#get-in-touch">Get in touch</a></li>
+                                <li><a href="finding_order.html">Track your Order </a></li>
+                                <li><a href="contact.html#partnership">Partnership</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="mobile-nav h-100 d-lg-none" id="mobile-nav">
+
+                    <div class="d-md-none mobile-search" id="mobile-search">
+                        <div class="search-input-container position-relative ">
+                            <input type="text" class="search-input mb-1" placeholder="Search">
+                        </div>
+                    </div>
+                  
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li class="mobile-dropdown">
+                            Contact Us <span class="ps-1"> <i class="fas fa-chevron-down" style="font-size: 12px;"></i></span>
+                            <ul class="mobile-dropdown-menu">
+                                <li><a href="contact.html">Get in touch</a></li>
+                                <li><a href="finding_order.html">Track your Order </a></li>
+                                <li><a href="contact.html#partnership">Partnership</a></li>
+                            </ul>
+                        </li>
+                        <li data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                            
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 22 22" fill="none">
+                                <path d="M0.666748 0.666748H1.98023C2.22762 0.666748 2.35132 0.666748 2.45086 0.711988C2.53859 0.751852 2.61294 0.815968 2.66503 0.896692C2.72414 0.988288 2.74164 1.11006 2.77662 1.3536L3.25259 4.66675M3.25259 4.66675L4.31036 12.3981C4.4446 13.3793 4.51172 13.8698 4.74758 14.2391C4.95542 14.5645 5.25338 14.8232 5.60561 14.9841C6.00535 15.1668 6.50321 15.1668 7.49891 15.1668H16.1048C17.0525 15.1668 17.5265 15.1668 17.9138 14.9972C18.2553 14.8477 18.5483 14.6066 18.7598 14.301C18.9998 13.9544 19.0885 13.4915 19.2658 12.5655L20.5969 5.61644C20.6593 5.29056 20.6906 5.12762 20.6453 5.00025C20.6056 4.88852 20.5273 4.79444 20.4244 4.73476C20.3071 4.66675 20.1402 4.66675 19.8066 4.66675H3.25259ZM8.71156 19.6668C8.71156 20.219 8.26134 20.6667 7.70596 20.6667C7.15058 20.6667 6.70036 20.219 6.70036 19.6668C6.70036 19.1144 7.15058 18.6667 7.70596 18.6667C8.26134 18.6667 8.71156 19.1144 8.71156 19.6668ZM16.7564 19.6668C16.7564 20.219 16.3062 20.6667 15.7507 20.6667C15.1954 20.6667 14.7452 20.219 14.7452 19.6668C14.7452 19.1144 15.1954 18.6667 15.7507 18.6667C16.3062 18.6667 16.7564 19.1144 16.7564 19.6668Z" stroke="#170707" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span>
+                            Basket </li>
+                    </ul>
+                    <div class="select-wrapper new_select_wrapper  ">
+                        <div class="custom-select" id="currency-select">
+                            <div class="select-selected">
+                                <span class="selected-text">VND</span>
+                                <img class="dropdown-icon" src="./images/down.svg" alt="dropdown">
+                            </div>
+                            <div class="select-items select-hide">
+                                <div data-value="VND">VND</div>
+                                <div data-value="USD">USD</div>
+                                <div data-value="GBP">GBP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="icon_box my-3  d-lg-block">
+                       
+                        
+                      
+                        
+                      
+                        
+                        <div class="d-none d-md-block">
+                            <img src="./images/user.svg" alt="user">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- banner section  -->
+    <section class="banner_section about_outer_section contact_us_outer_section">
+        <div class="container">
+            <div class="banner_box w-100">
+                <h6>CONTACT US</h6>
+               <h1>PLEASE GET IN TOUCH WITH US</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact form section  -->
+
+    <section class="contact_form_section">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-6">
+                    <div class="contact_left_content tracking_order_content">
+                    <h2 >Track Your Order</h2>
+                    <p>To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.</p>
+                </div>
+            </div>
+                
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <div class="contact_right_content">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <label for="name">Order ID *</label>
+                            <input type="text" class="form-control" placeholder="Found in your order confirmation email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Billing email *</label>
+                            <input type="email" class="form-control" placeholder="Email you used during checkout" required>
+                        </div>
+                        <button type="submit" class="btn btn-send">TRACK ORDER</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- partner section  -->
+    <section class="partner_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="patner_content">
+                        <h6>Become a Partner</h6>
+                        <h2>BRING ECO-FRIENDLY ELEGANCE TO YOUR STORE TODAY!</h2>
+                        <p>Enhance your store with our luxurious, sustainable products made from natural materials.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end align-items-center">
+                   <div class="patner_btn">
+                        <button>Partner with us <i class="fa fa-arrow-right"></i></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- asked question section  -->
+
+    <section class="faq_section">
+        <div class="container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="accordian_outer_sec">
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Who handles import/custom charges and possible delays?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse bg-transparent" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body bg-transparent">
+                        Please check customs duties with your local post office. All orders are subjected to respective local customs and may be opened by Customs for inspection. Although this is an uncommon situation, it can cause delays, which we advise...
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="view-more">
+           <button class="view-more-btn">View more <i class="fa fa-arrow-right"></i></button>
+        </div>
+    </div>
+      </div>
+    </section>
+    <!-- about section end  -->
+
+    <div class="footer_top_bar">
+        <div class="container">
+            <div class="d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap dot-section">
+                <span class="dot-item">Worldwide Shipping</span>
+                <span class="dot" style="font-size: 10px;">●</span>
+                <span class="dot-item">Free UK Standard Delivery</span>
+                <span class="dot" style="font-size: 10px;">●</span>
+                <span class="dot-item">Over 1400+ Satisfied Customers</span>
+                <span class="dot" style="font-size: 10px;">●</span>
+                <span class="dot-item">Affordable Luxury</span>
+              </div>
+        </div>
+    </div>
+    
+    <!-- Main Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer_left_content">
+                            <h2>Eco-friendly luxury, crafted from nature's finest fibers for your comfort and style.</h2>
+                            <h6>Accepted payment methods</h6>
+                            <div class="payment-methods">
+                                <img src="./images/visa.svg" alt="Visa">
+                                <img src="./images/masterpass.svg" alt="Mastercard">
+                                <img src="./images/apple_pay.svg" alt="Apple Pay">
+                                <img src="./images/google-pay.svg" alt="Google Pay">
+                                <img src="./images/jcb.svg" alt="JCB">
+                                <img src="./images/paypal.svg" alt="PayPal">
+                            </div>
+                            <div class="footer-links ">
+                                <a href="#">Terms & Conditions</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Accessibility Statement</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-0 newsletter_section_outer">
+                        <hr class="d-block d-md-none d-lg-none d-sm-block " style="color: #2b2b2b; opacity: 1;">
+                        <div class="footer_right_content">
+                            <div class="newsletter-section">
+                                <h3>SIGN UP TO NEWSLETTERS</h3>
+                                <div class="newsletter-input position-relative">
+                                    <input type="email" class="form-control" placeholder="Enter your email">
+                                    <button type="submit"><img src="./images/send_icon.svg" alt=""></button>
+                                </div>
+                                <p class="small mt-2">By signing up, you are agreeing to the <a href="#">Terms & Conditions</a>. Read our <a href="#">Privacy Policy</a>.</p>
+                                <div class="social_links pt-0 pt-md-4 pt-lg-4">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="home.html">Home</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="shop.html">Shop</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="about.html">About Us</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="#">CAREERS</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="contact.html">FAQs</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="contact.html">CONTACT US</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub_footer">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <div class="copyright mb-3 mb-md-0">
+                        <p class="mb-0">© 2024 WALLIS COLLECTION. ALL RIGHT RESERVED</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- offcanvas -->
+
+    <div class="offcanvas offcanvas-end offcanvas_shopping_cart" tabindex="-1" id="shoppingCart" aria-labelledby="shoppingCartLabel">
+        <div class="cart-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="cart-title">SHOPPING BAG</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <p class="free-shipping-text">You are eligible for free shipping</p>
+        </div>
+        
+        <div class="offcanvas-body p-0">
+            <!-- Cart Item 1 -->
+            <!-- <div class="cart-item">
+                <img src="./images/silk4.png" alt="Baby Mittens" class="cart-item-image">
+                <div class="cart-item-details">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="item-title">100% Silk Baby Mittens</h6>
+                        <div class="item-price">50.000 <span>VND</span></div>
+                    </div>
+                    <p class="item-color">Color: <span>White</span> </p>
+                  <div class="d-flex gap-2">  <p class="item-subscription">Subscription:  </p>
+                    <span>  <div class="select-wrapper new_select_wrapper ">
+                        <div class="custom-select">
+                            <div class="select-selected">
+                                <span class="selected-text">VND</span>
+                                <img class="dropdown-icon" src="./images/down.svg" alt="dropdown">
+                            </div>
+                            <div class="select-items select-hide">
+                                <div data-value="VND">VND</div>
+                                <div data-value="USD">USD</div>
+                                <div data-value="GBP">GBP</div>
+                            </div>
+                        </div>
+                    </div>
+                   </span>
+                </div>
+                   
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn"><i class="fas fa-minus"></i></button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn"><i class="fas fa-plus"></i></button>
+                            <a href="#" class="remove-link">Remove</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> -->
+        </div>
+     
+        <div class="cart-footer  border-top">
+
+            <div class="like_shipping d-flex justify-content-between align-items-center border-bottom ">
+                    <div class="like_content">
+                        <p>You might also like</p>
+                    </div>
+
+                    <div class="arrow_icon">
+                       <span><i class="fas fa-arrow-left"></i></span>
+                       <span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+            </div>
+
+            <div class="progress_outer">
+                <div class="shipping-progress">
+                <p>By <span>$50.000</span> more to enjoy FREE Shipping</p>
+                <div class="progress_bar">
+                    <input type="range" class="form-range" min="0" max="100" value="75" id="customRange1">
+                </div>
+               
+            </div>
+    
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="note_outer">
+                    <img src="./images/edit.svg" alt="icon_cart">
+                    <span class="ms-2">Note</span>
+                </div>
+
+                <div class="shipping_outer">
+                    <img src="./images/shiping.svg" alt="icon_cart">
+                    <span class="ms-2">Shipping</span>
+                </div>
+
+                <div class="coupon_outer">
+                    <img src="./images/coupun.svg" alt="icon_cart">
+                    <span class="ms-2">Coupoun</span>
+                </div>
+            </div>
+    
+            <div class="subtotal">
+                <span>SUBTOTAL</span>
+                <span>246.000</span>
+            </div>
+    
+            <div class="cart-actions ">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="shop.html"><button class="btn btn-shopping">CONTINUE SHOPPING</button></a>
+                    </div>
+                    <div class="col-6">
+                        <a href="checkout.html"> <button class="btn btn-checkout">CHECKOUT</button></a>
+                    </div>
+                </div>
+
+                
+            </div>
+    
+            <p class="cart-footer-note">Shipping, taxes and discounts will be calculated at checkout</p>
+        </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

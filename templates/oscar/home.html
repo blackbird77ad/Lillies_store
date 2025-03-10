@@ -1,0 +1,554 @@
+{% extends 'oscar/base.html' %}
+{% load static %}
+{% load category_tags %}
+{% load image_tags %}
+{% block body %}
+
+<body>
+    <!-- banner section  -->
+    <section class="banner_section">
+        <div class="container">
+            <div class="banner_box" data-aos="fade-up">
+               <h1>UNVEIL THE TRUE POTENTIAL OF NATURAL FIBRES</h1>
+              <a href="" class="text-decoration-none"> <button>SHOP NOW <span><img  src="{% static 'images/right_arrow.svg' %}" alt="arrow"></span></button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- product section  -->
+    <div class="offcanvas offcanvas-end offcanvas_shopping_cart" tabindex="-1" id="shoppingCart" aria-labelledby="shoppingCartLabel">
+        <div class="cart-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="cart-title">SHOPPING BAG</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <p class="free-shipping-text">You are eligible for free shipping</p>
+        </div>
+
+        <div class="offcanvas-body p-0">
+            <!-- Cart Item 1 -->
+            <!-- <div class="cart-item">
+                <img src="./images/silk4.png" alt="Baby Mittens" class="cart-item-image">
+                <div class="cart-item-details">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="item-title">100% Silk Baby Mittens</h6>
+                        <div class="item-price">50.000 <span>VND</span></div>
+                    </div>
+                    <p class="item-color">Color: <span>White</span> </p>
+                  <div class="d-flex gap-2">  <p class="item-subscription">Subscription:  </p>
+                    <span>  <div class="select-wrapper new_select_wrapper ">
+                        <div class="custom-select">
+                            <div class="select-selected">
+                                <span class="selected-text">VND</span>
+                                <img class="dropdown-icon" src="./images/down.svg" alt="dropdown">
+                            </div>
+                            <div class="select-items select-hide">
+                                <div data-value="VND">VND</div>
+                                <div data-value="USD">USD</div>
+                                <div data-value="GBP">GBP</div>
+                            </div>
+                        </div>
+                    </div>
+                   </span>
+                </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn"><i class="fas fa-minus"></i></button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn"><i class="fas fa-plus"></i></button>
+                            <a href="#" class="remove-link">Remove</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+     
+        <div class="cart-footer  border-top">
+
+            <div class="like_shipping d-flex justify-content-between align-items-center border-bottom ">
+                    <div class="like_content">
+                        <p>You might also like</p>
+                    </div>
+
+                    <div class="arrow_icon">
+                       <span><i class="fas fa-arrow-left"></i></span>
+                       <span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+            </div>
+
+            <div class="progress_outer">
+                <div class="shipping-progress">
+                <p>By <span>$50.000</span> more to enjoy FREE Shipping</p>
+                <div class="progress_bar">
+                    <input type="range" class="form-range" min="0" max="100" value="75" id="customRange1">
+                </div>
+               
+            </div>
+    
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="note_outer">
+                    <img src="./images/edit.svg" alt="icon_cart">
+                    <span class="ms-2">Note</span>
+                </div>
+
+                <div class="shipping_outer">
+                    <img src="./images/shiping.svg" alt="icon_cart">
+                    <span class="ms-2">Shipping</span>
+                </div>
+
+                <div class="coupon_outer">
+                    <img src="./images/coupun.svg" alt="icon_cart">
+                    <span class="ms-2">Coupoun</span>
+                </div>
+            </div>
+    
+            <div class="subtotal">
+                <span>SUBTOTAL</span>
+                <span>246.000</span>
+            </div>
+    
+            <div class="cart-actions ">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="shop.html"><button class="btn btn-shopping">CONTINUE SHOPPING</button></a>
+                    </div>
+                    <div class="col-6">
+                        <a href="{% url 'checkout' %}"> <button class="btn btn-checkout">CHECKOUT</button></a>
+                    </div>
+                </div>
+
+                
+            </div>
+    
+            <p class="cart-footer-note">Shipping, taxes and discounts will be calculated at checkout</p>
+        </div>
+        </div>
+    </div>
+
+        <section class="best-sellers">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">OUR BEST SELLERS</h2>
+            <div class="grid-container">
+                <!-- Product 1 -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/Silk_Exfoliation.png' %}" alt="Silk Collection">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Silk Collection</h3>
+                            <p class="product-price">19.99 <span>USD</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #333;"></span>
+                                <span class="color-option" style="background: #777;"></span>
+                                <span class="color-option" style="background: #aaa;"></span>
+                                <span class="color-option" style="background: #ddd;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Product 2 -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/silk2.png' %}" alt="Pink Scrunchie">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Pink Scrunchie</h3>
+                            <p class="product-price">19.99 <span>VND</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #ffb6c1;"></span>
+                                <span class="color-option" style="background: #fff;"></span>
+                                <span class="color-option" style="background: #ddd;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Product 3 -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/silk3.png' %}" alt="White Cap">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">White Cap</h3>
+                            <p class="product-price">19.99 <span>VND</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #fff; "></span>
+                                <span class="color-option" style="background: #000;"></span>
+                                <span class="color-option" style="background: #ddd;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Product 4 -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/silk4.png' %}" alt="Brown Scrunchie">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Brown Scrunchie</h3>
+                            <p class="product-price">19.99 <span>USD</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #8b4513;"></span>
+                                <span class="color-option" style="background: #deb887;"></span>
+                                <span class="color-option" style="background: #d2691e;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- product 5 -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/silk5.png' %}" alt="Brown Scrunchie">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Brown Scrunchie</h3>
+                            <p class="product-price">19.99 <span>VND</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #8b4513;"></span>
+                                <span class="color-option" style="background: #deb887;"></span>
+                                <span class="color-option" style="background: #d2691e;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- product 6 -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="600">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/silk6.png' %}" alt="Brown Scrunchie">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Brown Scrunchie</h3>
+                            <p class="product-price">19.99 <span>USD</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #8b4513;"></span>
+                                <span class="color-option" style="background: #deb887;"></span>
+                                <span class="color-option" style="background: #d2691e;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- product 7 -->
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="700">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/silk7.png' %}" alt="Brown Scrunchie">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Brown Scrunchie</h3>
+                            <p class="product-price">19.99 <span>VND</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #8b4513;"></span>
+                                <span class="color-option" style="background: #deb887;"></span>
+                                <span class="color-option" style="background: #d2691e;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- product 8 -->
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="800">
+                        <span class="sale-badge">hot</span>
+                        <div class="product-image">
+                            <img src="{% static 'images/silk8.png' %}" alt="Brown Scrunchie">
+                            <div class="add-to-cart d-flex gap-4 align-items-center" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                                <button class="cart-btn">Add to Cart</button>
+                                <div class="icon_hover">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Brown Scrunchie</h3>
+                            <p class="product-price">19.99 <span>USD</span></p>
+                            <div class="color-options">
+                                <span class="color-option" style="background: #8b4513;"></span>
+                                <span class="color-option" style="background: #deb887;"></span>
+                                <span class="color-option" style="background: #d2691e;"></span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- product section end  -->
+
+    <!-- rating section  -->
+
+    <section class="rating_section">
+        <div class="container p-0">
+            <div class="position-relative">
+                <div class="rating_slider" data-aos="fade-left" data-aos-delay="100">
+                    <!-- Amazon Store Review -->
+                      <div class="rate_flex_sec">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="flex_rating_sec d-flex align-items-center justify-content-around gap-0 gap-md-5 gap-lg-5 flex-wrap">
+                                    <div class="amazon_rating d-flex align-items-center gap-4 flex-wrap me-auto">
+                                        <img src="{% static 'images/amazon_logo.svg' %}" alt="amazon" class="rating-logo">
+                                        <div class="rating_text">
+                                            <h3>Amazon store</h3>
+                                                <button>Millies Silk <span><i class="fas fa-arrow-right"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="rate_box me-auto">
+                                        <div class="rate_box_flex d-flex align-items-center gap-4 flex-wrap">
+                                            <h3>4.8 <span>/5</span></h3>
+                                            <div class="rate_star_outer">
+                                                <div class="rate_star">
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                </div>
+                                                <p>98% positive lifetime (4.534K+ total ratings)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Etsy Store Review -->
+                    <div class="rate_flex_sec">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="flex_rating_sec d-flex align-items-center justify-content-around gap-0 gap-md-5 gap-lg-5 flex-wrap">
+                                    <div class="amazon_rating d-flex align-items-center gap-4 flex-wrap me-auto">
+                                        <img src="{% static 'images/etsy.png' %}" alt="etsy" class="rating-logo">
+                                        <div class="rating_text">
+                                            <h3>Etsy store</h3>
+                                            <button>Millies Silk <span><i class="fas fa-arrow-right"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="rate_box me-auto">
+                                        <div class="rate_box_flex d-flex align-items-center gap-4 flex-wrap">
+                                            <h3>3.5 <span>/5</span></h3>
+                                            <div class="rate_star_outer">
+                                                <div class="rate_star">
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                </div>
+                                                <p>98% positive lifetime (4.534K+ total ratings)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" position-absolute rating_btn_sec">
+                    <button class="btn btn-view-all next-review">Next Review <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    
+
+    <!-- review section end  -->
+
+    <section class="category_section_home">
+        <div class="category-section">
+            <h2 class="category-title" data-aos="fade-up" data-aos-delay="100">CATEGORIES</h2>
+
+            <div class="outer_slider_product overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="customer_category_slide slider category_slider">
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cete1.png' %}" alt="Silk Scrunchies" class="category-image">
+                    <p class="category-name">Silk Scrunchies</p>
+                </div>
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cate2.png' %}" alt="Silk Exfoliation" class="category-image">
+                    <p class="category-name">Silk Exfoliation</p>
+                </div>
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cate3.png' %}" alt="Baby Silk Mittens" class="category-image">
+                    <p class="category-name">Baby Silk Mittens</p>
+                </div>
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cate4.png' %}" alt="Face Mask" class="category-image">
+                    <p class="category-name">Face Mask</p>
+                </div>
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cate2.png' %}" alt="Silk Exfoliation" class="category-image">
+                    <p class="category-name">Face Mask</p>
+                </div>
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cete1.png' %}" alt="Silk Scrunchies" class="category-image">
+                    <p class="category-name">Face Mask</p>
+                </div>
+
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cete1.png' %}" alt="Silk Scrunchies" class="category-image">
+                    <p class="category-name">Silk Scrunchies</p>
+                </div>
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cate2.png' %}" alt="Silk Exfoliation" class="category-image">
+                    <p class="category-name">Silk Exfoliation</p>
+                </div>
+                <div class="slide_new category_slide">
+                    <img src="{% static 'images/cate3.png' %}" alt="Baby Silk Mittens" class="category-image">
+                    <p class="category-name">Baby Silk Mittens</p>
+                </div>
+
+                <!-- Add more items as needed -->
+            </div>
+            <div class="category-slider-navigation">
+                <button class="category-slider-btn custom-prev-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="category-slider-btn custom-next-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- category section end  -->
+
+    <!-- gallery section  -->
+    <section class="gallery-section">
+        <h2 class="gallery-title" data-aos="fade-up" data-aos-delay="100">Be Inspired</h2>
+        <div class="gallery-grid">
+            <!-- First Row - Left to Right -->
+            <div class="gallery-item" data-aos="fade-right" data-aos-delay="100">
+                <img src="{% static 'images/album1.png' %}" alt="Silver aesthetic items" />
+            </div>
+            <div class="gallery-item" data-aos="fade-right" data-aos-delay="500">
+                <img src="{% static 'images/album2.png' %}" alt="Coffee and flower decoration" />
+            </div>
+            <div class="gallery-item" data-aos="fade-right" data-aos-delay="300">
+                <img src="{% static 'images/album3.png' %}" alt="White silk fabric" />
+            </div>
+            <!-- Second Row - Right to Left -->
+            <div class="gallery-item" data-aos="fade-left" data-aos-delay="400">
+                <img src="{% static 'images/album4.png' %}" alt="Colored face masks" />
+            </div>
+            <div class="gallery-item" data-aos="fade-left" data-aos-delay="500">
+                <img src="{% static 'images/album5.png' %}" alt="Purple flowers" />
+            </div>
+            <div class="gallery-item" data-aos="fade-left" data-aos-delay="600">
+                <img src="{% static 'images/album6.png' %}" alt="Blue gift box" />
+            </div>
+            <div class="gallery-item" data-aos="fade-left" data-aos-delay="700">
+                <img src="{% static 'images/album7.png' %}" alt="Pink scrunchies" />
+            </div>
+            <!-- Third Row - Left to Right -->
+            <div class="gallery-item" data-aos="fade-right" data-aos-delay="800">
+                <img src="{% static 'images/album8.png' %}" alt="Teal and white scrunchies" />
+            </div>
+            <div class="gallery-item" data-aos="fade-right" data-aos-delay="900">
+                <img src="{% static 'images/album9.png' %}" alt="Gold scrunchie gift" />
+            </div>
+            <div class="gallery-item" data-aos="fade-right" data-aos-delay="1000">
+                <img src="{% static 'images/album10.png' %}" alt="Pink leather accessory" />
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery section end  -->
+
+    <section class="better_section" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Making Every Moment Better</h2>
+                    <p>Eco-friendly luxury, crafted from nature’s finest fibers for your comfort and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- better section end  -->
+
+    <!-- about section  -->
+
+    <section class="home_about_section">
+        <div class="container-fluid about-section">
+            <div class="row">
+            <div class="col-lg-6 col-md-12 p-0 about-image" data-aos="fade-right" data-aos-delay="100">
+                <img src="{% static 'images/home_about.jpg' %}" alt="about">
+            </div>
+            <div class="col-lg-6 col-md-12 p-0" data-aos="fade-left" data-aos-delay="100">
+                <div class="about-content">
+                <h6>About </h6>
+                <h2>Millies</h2>
+                <p>
+                    We are a UK-based artisan store dedicated to crafting stunning and affordable, eco-friendly products. At Millies, we use only the finest natural materials like bamboo, cotton, wool, linen, and silk. Our love for design, care, and luxury is intricately woven into each piece, ensuring you experience unparalleled comfort and a touch of everyday elegance.
+                </p>
+                </a>
+                <a class="text-decoration-none" href="about.html"><button>Read more <i class="fas fa-arrow-right"></i></button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section end  -->
+    {% block footer %}
+    {% include 'oscar/footer.html' %}
+    {% endblock %}
+
+ </body>
+
+{% endblock %}

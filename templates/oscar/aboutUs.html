@@ -1,0 +1,309 @@
+{% extends 'oscar/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <!-- banner section  -->
+    <section class="banner_section about_outer_section">
+        <div class="container">
+            <div class="banner_box w-100" data-aos="fade-up" data-aos-duration="1000">
+                <h6>about us</h6>
+               <h1>CRAFTING NATURAL ELEGANCE TOGETHER</h1>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- about details section  -->
+    <section class="about_details_section">
+        <div class="container">
+            <div class="about_details_box">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="about_details_image_outer position-relative">
+                         <div class="about_details_image position-relative">
+                                <img class="img-fluid"  src="{% static 'images/Group_img1.png' %}" alt="about">
+                                <!-- <div class="about_bottom_image ">
+                                    <img class="img-fluid" src="{% static 'images/about2.jpg' %}" alt="about">
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="about_details_content">
+                            <h6>WHO WE ARE</h6>
+                            <h2>Sustainable Elegance in Every Detail</h2>
+                            <p>At Millies Collections, we create eco-friendly, handmade products using the finest natural materials like bamboo, cotton, and silk. Experience luxurious comfort and artistry with every piece, designed with care and sustainability in mind.</p>
+                            <div class="about_product_sec">
+                                <div class="Premium_Materials">
+                                    <div class="premium_image">
+                                        <img src="{% static 'images/star.svg' %}" alt="premium">
+                                    </div>
+                                    <div class="premium_content">
+                                        <h3>Natural, Premium Materials</h3>
+                                        <p>Only the finest eco-friendly fibers for lasting comfort.</p>
+                                    </div>
+                                </div>
+
+                                <div class="Premium_Materials">
+                                    <div class="premium_image">
+                                        <img src="{% static 'images/star.svg' %}" alt="premium">
+                                    </div>
+                                    <div class="premium_content">
+                                        <h3>Elegance Meets Comfort</h3>
+                                        <p>Sophisticated designs crafted for everyday use.</p>
+                                    </div>
+                                </div>
+
+                                <div class="Premium_Materials">
+                                    <div class="premium_image">
+                                        <img src="{% static 'images/star.svg' %}" alt="premium">
+                                    </div>
+                                    <div class="premium_content">
+                                        <h3>Sustainable Craftsmanship</h3>
+                                        <p>Handmade with care and respect for nature.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- vision section  -->
+    <section class="about_details_section vision_section">
+        <div class="container">
+            <div class="about_details_box">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="about_details_content text-center vision_content">
+                            <h6>OUR VISION</h6>
+                            <h2>Elevating Everyday <br> Luxury for You</h2>
+                            <p>As we continue to grow, we will keep adding subtle glamour and everyday luxury to your life and
+                                well-being. We will dedicate our time and efforts to designing items with love, care, and luxury. Join
+                                us on a journey towards comfort, quality, and sustainable living, and elevate your lifestyle with our
+                                meticulously crafted products.</p>
+                                <a href=""><button>EXPLORE PRODUCTS <span class="ms-2"><i class="fas fa-arrow-right"></i></span></button></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ms-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="vision_image">
+                             <img class="img-fluid" src="{% static 'images/about_hot.png' %}" alt="vision">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- mission section  -->
+    <section class="mission_section">
+       
+            <div class="mission_box" data-aos="fade-up" data-aos-duration="1000">
+                <h6>OUR MISION</h6>
+                <h2>Embrace Luxury and Sustainability <br> in Every Purchase</h2>
+                <p>Elevate your lifestyle with durable, eco-friendly products crafted from natural fibers, without sacrificing style.</p>
+            </div>
+
+           <div class="mission_image_sec" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="mission_image_left">
+                <img src="{% static 'images/mission_left.png' %}" alt="mission">
+                <div class="mission_tag d-flex gap-4 align-items-center mt-3">   
+                    <h2>ENDURING</h2>
+                    <p>Embrace sustainability with luxury and comfort in every  piece.</p>
+                </div>
+            </div>
+            <div class="mission_image_right">
+                <div class="mission_tag mb-3">   
+                    <h2>Crafted for Lasting Comfort</h2>
+                    <p>Our finely made items ensure durability and elegance.</p>
+                </div>
+                <img src="{% static 'images/missin_right.png' %}" alt="mission">
+            </div>
+           </div>
+        
+    </section>
+
+    <!-- mission section end  -->
+
+    <!-- rating section  -->
+
+    <section class="rating_section">
+        <div class="container">
+            <div class="position-relative">
+                <div class="rating_slider" data-aos="fade-left">
+                    <!-- Amazon Store Review -->
+                      <div class="rate_flex_sec">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="flex_rating_sec d-flex align-items-center justify-content-around gap-0 gap-md-5 gap-lg-5 flex-wrap">
+                                    <div class="amazon_rating d-flex align-items-center gap-4 flex-wrap me-auto">
+                                        <img src="{% static 'images/amazon_logo.svg' %}" alt="amazon" class="rating-logo">
+                                        <div class="rating_text">
+                                            <h3>Amazon store</h3>
+                                                <button>Millies Silk <span><i class="fas fa-arrow-right"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="rate_box me-auto">
+                                        <div class="rate_box_flex d-flex align-items-center gap-4 flex-wrap">
+                                            <h3>4.8 <span>/5</span></h3>
+                                            <div class="rate_star_outer">
+                                                <div class="rate_star">
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                </div>
+                                                <p>98% positive lifetime (4.534K+ total ratings)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        </div>
+    
+                        
+                    </div>
+                
+                    <!-- Etsy Store Review -->
+                    <div class="rate_flex_sec">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="flex_rating_sec d-flex align-items-center justify-content-around gap-0 gap-md-5 gap-lg-5 flex-wrap">
+                                    <div class="amazon_rating d-flex align-items-center gap-4 flex-wrap me-auto">
+                                        <img src="{% static 'images/etsy.png' %}" alt="etsy" class="rating-logo">
+                                        <div class="rating_text">
+                                            <h3>Etsy store</h3>
+                                            <button>Millies Silk <span><i class="fas fa-arrow-right"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="rate_box me-auto">
+                                        <div class="rate_box_flex d-flex align-items-center gap-4 flex-wrap">
+                                            <h3>3.5 <span>/5</span></h3>
+                                            <div class="rate_star_outer">
+                                                <div class="rate_star">
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                    <i class="fas fa-star" style="color: #F7CA18;"></i>
+                                                </div>
+                                                <p>98% positive lifetime (4.534K+ total ratings)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class=" position-absolute rating_btn_sec">
+                    <button class="btn btn-view-all next-review">Next Review <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+          
+
+        </div>
+    </section>
+    
+    
+
+    <!-- review section end  -->
+
+    <!-- value section  -->
+
+    <section class="values_section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">OUR VALUES</h2>
+            <div class="value_content_outer">
+            <div class="row">
+                <!-- Creative -->
+                <div class="col-md-4 col-sm-6 value-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="icon-wrapper">
+                        <img src="{% static 'images/creative.svg' %}" alt="creative">
+                    </div>
+                    <h3 class="value-title">Creative</h3>
+                    <p class="value-description">Crafting unique solutions to every challenge <br> we face.</p>
+                </div>
+
+                <!-- Inclusive -->
+                <div class="col-md-4 col-sm-6 value-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="icon-wrapper">
+                        <img src="{% static 'images/inclusive.svg' %}" alt="inclusive">
+                    </div>
+                    <h3 class="value-title">Inclusive</h3>
+                    <p class="value-description">Creating spaces where everyone feels welcome and valued.</p>
+                </div>
+
+                <!-- Passionate -->
+                <div class="col-md-4 col-sm-6 value-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="icon-wrapper">
+                        <img src="{% static 'images/passionate.svg' %}" alt="passionate">
+                    </div>
+                    <h3 class="value-title">Passionate</h3>
+                    <p class="value-description">Passion drives our every move and fuels our vision.</p>
+                </div>
+
+                <!-- Connected -->
+                <div class="col-md-4 col-sm-6 value-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="icon-wrapper">
+                       <img src="{% static 'images/connected.svg' %}" alt="">
+                    </div>
+                    <h3 class="value-title">Connected</h3>
+                    <p class="value-description">Bringing people together through meaningful shared experiences.</p>
+                </div>
+
+                <!-- Innovative -->
+                <div class="col-md-4 col-sm-6 value-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="icon-wrapper">
+                       <img src="{% static 'images/inno.svg' %}" alt="">
+                    </div>
+                    <h3 class="value-title">Innovative</h3>
+                    <p class="value-description">Continuously innovating to push beyond the boundaries.</p>
+                </div>
+
+                <!-- Purposeful -->
+                <div class="col-md-4 col-sm-6 value-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="icon-wrapper">
+                       <img src="{% static 'images/puro.svg' %}" alt="">
+                    </div>
+                    <h3 class="value-title">Purposeful</h3>
+                    <p class="value-description">Every action is driven by purpose and lasting value.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- value section end  -->
+  
+
+   
+
+    <!-- gallery section end  -->
+
+    <section class="better_section about_better_section  mb-3" style="height: 298px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="">Making Every Moment Better</h2>
+                    <p>Eco-friendly luxury, crafted from nature’s finest fibers for your comfort and style.</p>
+                    <a href=""><button>REACH OUT TO US <span class="ms-2"><i class="fas fa-arrow-right"></i></span></button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    {% block footer %}
+        {% include 'oscar/footer.html' %}
+    {% endblock %}
+
+{% endblock %}

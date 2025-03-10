@@ -1,0 +1,103 @@
+{% load static %}
+
+<!-- Main Footer -->
+    <footer>
+        <div class="footer_top_bar">
+            <div class="container">
+                <div class="d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap dot-section">
+                    <span class="dot-item">Worldwide Shipping</span>
+                    <span class="dot">●</span>
+                    <span class="dot-item">Free UK Standard Delivery</span>
+                    <span class="dot">●</span>
+                    <span class="dot-item">Over 1400+ Satisfied Customers</span>
+                    <span class="dot">●</span>
+                    <span class="dot-item">Affordable Luxury</span>
+                  </div>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer_left_content">
+                            <h2>Eco-friendly luxury, crafted from nature's finest fibers for your comfort and style.</h2>
+                            <h6>Accepted payment methods</h6>
+                            <div class="payment-methods">
+                                <img src="{% static 'images/visa.svg' %}" alt="Visa">
+                                <img src="{% static 'images/masterpass.svg' %}" alt="Mastercard">
+                                <img src="{% static 'images/apple_pay.svg' %}" alt="Apple Pay">
+                                <img src="{% static 'images/google-pay.svg' %}" alt="Google Pay">
+                                <img src="{% static 'images/jcb.svg' %}" alt="JCB">
+                                <img src="{% static 'images/paypal.svg' %}" alt="PayPal">
+                            </div>
+                            <div class="footer-links ">
+                                <a href="#">Terms & Conditions</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Accessibility Statement</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-0 newsletter_section_outer">
+                        <hr class="d-block d-md-none d-lg-none d-sm-block " style="color: #2b2b2b; opacity: 1;">
+                        <div class="footer_right_content">
+                            <div class="newsletter-section">
+                                <h3>SIGN UP TO NEWSLETTERS</h3>
+                                <div class="newsletter-input position-relative">
+                                    <input type="email" class="form-control" placeholder="Enter your email">
+                                    <button type="submit"><img src="./images/send_icon.svg" alt=""></button>
+                                </div>
+                                <p class="small mt-2">By signing up, you are agreeing to the <a href="#">Terms & Conditions</a>. Read our <a href="#">Privacy Policy</a>.</p>
+                                <div class="social_links pt-0 pt-md-4 pt-lg-4">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="home.html">Home</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="shop.html">Shop</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="about.html">About Us</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="#">CAREERS</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="contact.html">FAQs</a>
+                                        </div>
+                                        <div class="col-6 col-sm-4 my-3 md-my-2">
+                                            <a href="contact.html">CONTACT US</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub_footer">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <div class="copyright mb-3 mb-md-0">
+                        <p class="mb-0">© 2024 WALLIS COLLECTION. ALL RIGHT RESERVED</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="addToCartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body d-flex justify-content-between align-items-center">
+                <span>Item added to cart successfully!</span>
+                <button class="btn btn-sm " data-bs-dismiss="toast"><span><img src="{% static 'images/toast_close.svg' %}" alt=""></span></button>
+            </div>
+        </div>
+    </div>

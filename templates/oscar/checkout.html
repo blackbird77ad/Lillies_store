@@ -1,0 +1,382 @@
+{% extends 'oscar/base.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- header -->
+
+    <!-- checkout page section  -->
+    <section class="checkout_page_section">
+        <div class="container">
+            <div class="row">
+                <!-- Cart Listing -->
+                <div class="col-md-6">
+                    <div class="left_cart_listing"> 
+                        <h2 class="section-title">CART LISTING</h2>
+                        <div class="cart-items">
+                            <!-- Item 1 -->
+                            <div class="checkout_cart_item">
+                                <img src="{% static 'images/silk2.png' %}" alt="Silk Baby Mittens">
+                                <div class="item-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h3>100% Silk Baby Mittens</h3>
+                                        <div class="item-price">50,000 <span>VND</span></div>
+                                    </div>
+                                    <div class="item-color">Color: <span>White</span> </div>
+                                    <div class="item-color">Subscribe: <span>Weekly</span> </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="checkout_cart_item">
+                                <img src="{% static 'images/silk3.png' %}" alt="Silk Lined Beanie">
+                                <div class="item-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h3>100% Silk Lined Beanie</h3>
+                                        <div class="item-price">194,000 <span>VND</span></div>
+                                    </div>
+                                    <div class="item-color">Color: <span>Grey</span> </div>
+                                    <div class="item-color">Subscribe: <span>Weekly</span> </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="checkout_cart_item">
+                                <img src="{% static 'images/silk4.png' %}" alt="Silk Face Mask">
+                                <div class="item-details">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h3>100% Silk Face Mask</h3>
+                                        <div class="item-price">98,000 <span>VND</span></div>
+                                    </div>
+                                    <div class="item-color">Color: <span>Pink</span></div>
+                                    <div class="item-color">Subscribe: <span>Weekly</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Checkout Information -->
+                <div class="col-md-6">
+                    <div class="right_checkout_information">
+                        <!-- Guest Checkout -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <h2>Guest Checkout</h2>
+                                <a href="#" class="edit-btn"><img src="{% static 'images/lpe.svg' %}" alt="edit"></a>
+                            </div>
+                            <p><span class="pe-2"><i class="fas fa-envelope"></i></span>Lewis.Hackett8@gmail.com</p>
+                        </div>
+                        <!-- Shipping Information -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <h2>Shipping Information</h2>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#" class="edit-btn"><img src="{% static 'images/lpe.svg' %}" alt="edit"></a>
+                            </div>
+                            <div class="shipping_information">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span><i class="fas fa-user"></i></span>
+                                    <p>Lewis Hackett</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span><i class="fas fa-map-marker-alt"></i></span>
+                                    <p>845 Colchester Road, Lynn Ditherchester DK713 2GG9</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span><i class="fas fa-phone"></i></span>
+                                    <p>+1-929-535-0145</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Payment -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <h2>Payment</h2>
+                                <a href="#" class="edit-btn"><img src="{% static 'images/lpe.svg' %}" alt="edit"></a>
+                            </div>
+                            <form id="payment-form" action="{% url 'stripe-payment' %}" method="POST">
+                                {% csrf_token %}
+                                <div id="card-element">
+                                    <!-- Stripe Element will be inserted here -->
+                                </div>
+                                <div id="card-errors" role="alert"></div>
+                            </form>
+                        </div>
+                        <!-- Note -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <h2>Note</h2>
+                                <a href="#" class="edit-btn"><img src="{% static 'images/lpe.svg' %}" alt="edit"></a>
+                            </div>
+                            <p class="my-3">Please pack it carefully. I will give it to my friend.</p>
+                        </div>
+                        <!-- Discount Code -->
+                        <div class="discount_code_outer">
+                            <div class="discount-input position-relative">
+                                <input type="text" class="form-control" placeholder="Enter discount code or gift card">
+                                <button class="btn btn-outline-dark">APPLY</button>
+                                <div class="icon_alert">
+                                    <img src="{% static 'images/alert.svg' %}" alt="alert">
+                                </div>
+                            </div>
+                            <div class="checkout_checkbox_section">
+                                <input type="checkbox" id="terms-and-conditions" required>
+                                <label for="terms-and-conditions">Gifting option</label>
+                            </div>
+                        </div>
+                        <!-- Price Summary -->
+                        <div class="price-summary">
+                            <div class="price-row">
+                                <p>Subtotal</p>
+                                <p>100 <span>VND</span></p>
+                            </div>
+                            <div class="price-row">
+                                <p>Shipping</p>
+                                <p>30,000 <span>VND</span></p>
+                            </div>
+                            <div class="price-row">
+                                <p>Coupon</p>
+                                <p>-30,000 <span>VND</span></p>
+                            </div>
+                            <div class="price-row total-row">
+                                <p>TOTAL</p>
+                                <p class="total-price">100 <span>VND</span></p>
+                            </div>
+                        </div>
+                        <div class="order_btn_section">
+                            <button class="place-order-btn">PLACE ORDER</button>
+                            <p class="order-note">Please double-check your order and shipping details before submitting.</p>
+                        </div>
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="#">Refund policy</a></li>
+                                <li><a href="#">Shipping policy</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Terms of service</a></li>
+                                <li><a href="#">Subscription policy</a></li>
+                                <li><a href="#">FAQ Returns</a></li>
+                                <li><a href="#">Exchanges Rewards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup -->
+    <!-- Modal -->
+    <div class="modal fade popup_outer_section" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Shipping Information</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" value="Lewis Hackett">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone number <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="phone" value="1-329-535-6745 x570">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" value="846 Gleichner Parks, Lake Dillanchester 70413-0609">
+                        </div>
+                        <div class="mb-3">
+                            <label for="apartment" class="form-label">Apartment, suite, etc. (optional)</label>
+                            <input type="text" class="form-control" id="apartment" placeholder="Enter apartment, suite, etc.">
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="state" class="form-label">State</label>
+                                <select id="state" class="form-select">
+                                    <option selected>University Dr</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="zipcode" class="form-label">ZIP code</label>
+                                <input type="text" class="form-control" id="zipcode" value="94025">
+                            </div>
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" value="Mental Park">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Not now</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+                <div class="footer_note">
+                    <p>Please double-check your order and shipping details before saving.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end offcanvas_shopping_cart" tabindex="-1" id="shoppingCart" aria-labelledby="shoppingCartLabel">
+        <div class="cart-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="cart-title">SHOPPING BAG</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <p class="free-shipping-text">You are eligible for free shipping</p>
+        </div>
+        <div class="offcanvas-body p-0">
+            <!-- Cart Item 1 -->
+            <!-- <div class="cart-item">
+                <img src="{% static 'images/silk4.png' %}" alt="Baby Mittens" class="cart-item-image">
+                <div class="cart-item-details">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="item-title">100% Silk Baby Mittens</h6>
+                        <div class="item-price">50.000 <span>VND</span></div>
+                    </div>
+                    <p class="item-color">Color: <span>White</span> </p>
+                    <div class="d-flex gap-2">
+                        <p class="item-subscription">Subscription: </p>
+                        <span>
+                            <div class="select-wrapper new_select_wrapper">
+                                <div class="custom-select">
+                                    <div class="select-selected">
+                                        <span class="selected-text">VND</span>
+                                        <img class="dropdown-icon" src="{% static 'images/down.svg' %}" alt="dropdown">
+                                    </div>
+                                    <div class="select-items select-hide">
+                                        <div data-value="VND">VND</div>
+                                        <div data-value="USD">USD</div>
+                                        <div data-value="GBP">GBP</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn"><i class="fas fa-minus"></i></button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn"><i class="fas fa-plus"></i></button>
+                            <a href="#" class="remove-link">Remove</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="cart-footer border-top">
+            <div class="like_shipping d-flex justify-content-between align-items-center border-bottom">
+                <div class="like_content">
+                    <p>You might also like</p>
+                </div>
+                <div class="arrow_icon">
+                    <span><i class="fas fa-arrow-left"></i></span>
+                    <span><i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="progress_outer">
+                <div class="shipping-progress">
+                    <p>By <span>$50.000</span> more to enjoy FREE Shipping</p>
+                    <div class="progress_bar">
+                        <input type="range" class="form-range" min="0" max="100" value="75" id="customRange1">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="note_outer">
+                    <img src="{% static 'images/edit.svg' %}" alt="icon_cart">
+                    <span class="ms-2">Note</span>
+                </div>
+                <div class="shipping_outer">
+                    <img src="{% static 'images/shiping.svg' %}" alt="icon_cart">
+                    <span class="ms-2">Shipping</span>
+                </div>
+                <div class="coupon_outer">
+                    <img src="{% static 'images/coupun.svg' %}" alt="icon_cart">
+                    <span class="ms-2">Coupon</span>
+                </div>
+            </div>
+            <div class="subtotal">
+                <span>SUBTOTAL</span>
+                <span>246.000</span>
+            </div>
+            <div class="cart-actions">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="shop.html"><button class="btn btn-shopping">CONTINUE SHOPPING</button></a>
+                    </div>
+                    <div class="col-6">
+                        <a href="checkout.html"><button class="btn btn-checkout">CHECKOUT</button></a>
+                    </div>
+                </div>
+            </div>
+            <p class="cart-footer-note">Shipping, taxes and discounts will be calculated at checkout</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe('{{ stripe_public_key }}');
+    var elements = stripe.elements();
+    var style = {
+        base: {
+            color: "#32325d",
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSmoothing: "antialiased",
+            fontSize: "16px",
+            "::placeholder": {
+                color: "#aab7c4"
+            }
+        },
+        invalid: {
+            color: "#fa755a",
+            iconColor: "#fa755a"
+        }
+    };
+    var card = elements.create("card", { style: style });
+    card.mount("#card-element");
+
+    card.on('change', function(event) {
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+    });
+
+    var placeOrderButton = document.querySelector('.place-order-btn');
+    placeOrderButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        stripe.createToken(card).then(function(result) {
+            if (result.error) {
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+            } else {
+                stripeTokenHandler(result.token);
+            }
+        });
+    });
+
+    function stripeTokenHandler(token) {
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', token.id);
+        form.appendChild(hiddenInput);
+
+        var totalAmount = document.querySelector('.total-price').textContent.replace(/\D/g, '');
+        var amountInput = document.createElement('input');
+        amountInput.setAttribute('type', 'hidden');
+        amountInput.setAttribute('name', 'amount');
+        amountInput.setAttribute('value', totalAmount);
+        form.appendChild(amountInput);
+
+        form.submit();
+    }
+</script>
+{% endblock %}
