@@ -61,10 +61,12 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'django_tables2',
     # Local
-    "apps.home",
-    "apps.aboutUs",
-    "apps.contactUs",
-    "millies_backend",
+    "millies_backend.apps.aboutUs",
+    "millies_backend.apps.auth",
+    "millies_backend.apps.tracking",
+    "millies_backend.apps.shipping",
+    "millies_backend.apps.contactUs",
+    "millies_backend.apps.home",
 ]
 
 SITE_ID = 1
@@ -186,5 +188,7 @@ OSCAR_ALLOW_ANON_CHECKOUT = True
 STRIPE_PUBLIC_KEY = ''
 STRIPE_SECRET_KEY = ''
 
-SENDCLOUD_API_KEY = "your_public_key_here"
-SENDCLOUD_SECRET_KEY = "your_secret_key_here"
+SENDCLOUD_API_KEY = "your_api_key_here"
+SENDCLOUD_API_SECRET = "your_api_secret_here"
+SENDCLOUD_BASE_URL = "https://api.sendcloud.dev/v2/"
+

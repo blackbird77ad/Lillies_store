@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ContactusConfig(AppConfig):
+class HomeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.contactUs'
+    name = 'millies_backend.apps.home'
