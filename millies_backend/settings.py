@@ -188,7 +188,7 @@ OSCAR_ALLOW_ANON_CHECKOUT = True
 STRIPE_PUBLIC_KEY = ''
 STRIPE_SECRET_KEY = ''
 
-SENDCLOUD_API_KEY = "your_api_key_here"
-SENDCLOUD_API_SECRET = "your_api_secret_here"
+SENDCLOUD_API_KEY = "api_key_here"
+SENDCLOUD_API_SECRET = "api_secret_here"
 SENDCLOUD_BASE_URL = "https://api.sendcloud.dev/v2/"
 
