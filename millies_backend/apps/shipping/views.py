@@ -16,8 +16,3 @@ def get_shipping_prices(request):
     headers = {"Authorization": f"Bearer {settings.SENDCLOUD_API_KEY}"}
     response = requests.get(url, headers=headers)
     return JsonResponse(response.json())
-
-urlpatterns += [
-    path("shipping-prices/", get_shipping_prices, name="shipping-prices"),
-]
-

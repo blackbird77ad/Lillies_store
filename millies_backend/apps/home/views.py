@@ -3,8 +3,9 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 import stripe
+from millies_backend.apps.home.models import StripeCharge
 
-from apps.home.models import StripeCharge
+
 
 
 class HomeView(TemplateView):
